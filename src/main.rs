@@ -7,12 +7,12 @@ use std::sync;
 use std::sync::{Arc, Mutex, MutexGuard, RwLock};
 use std::sync::atomic::AtomicUsize;
 
-use hyper::{Body, http, Method, Request, Response, Server, StatusCode};
+use hyper::{Body, http, Method, Request, Response, StatusCode};
+use hyper::server::Server;
 use hyper::body::Bytes;
 use hyper::http::header;
 use hyper::service::{make_service_fn, service_fn};
 use serde::{Deserialize, Serialize};
-use tokio::future;
 use url::Url;
 use std::borrow::BorrowMut;
 
